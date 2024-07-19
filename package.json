@@ -1,0 +1,25 @@
+{
+  "name": "yodapp",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizados para mobile com appium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DambroskiGustavo/yodapp-appium-robot.git"
+  },
+  "author": "Gustavo Dambroski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DambroskiGustavo/yodapp-appium-robot/issues"
+  },
+  "homepage": "https://github.com/DambroskiGustavo/yodapp-appium-robot#readme",
+  "dependencies": {
+    "appium": "^2.0.1"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^3.7.3"
+  }
+}
