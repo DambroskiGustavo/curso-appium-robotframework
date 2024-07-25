@@ -2,35 +2,18 @@
 
 Library    AppiumLibrary
 
-*** Variables ***
-
-${START}        QAX
+Resource   ../resources/base.resource
 
 *** Test Cases ***
 
 Deve realizar um clique simples
 
-    Open Application    http://localhost:4723
-    ...                 platformName=Android
-    ...                 deviceName=Android Emulator
-    ...                 automationName=UIAutomator2
-    ...                 app=${EXECDIR}/app/yodapp-beta.apk
-    ...                 udid=emulator-5554
-    ...                 autoGrantPermissions=true
+    Start session
+    Get started
+    Navigate to    Clique em Botões
+    Go to item     Clique simples    Botão clique simples
     
-    Wait Until Page Contains    ${START}    5
-    Click Text                  ${START}
+    Click Text                       CLIQUE SIMPLE
+    Wait Until Page Contains         Isso é um clique simples
 
-    ${hambunger}    Set Variable    xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
-
-    Wait Until Element Is Visible    ${hambunger}    5
-    Click Element                    ${hambunger}    
-
-    ${menu_item}    Set Variable    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]
-
-    Wait Until Element Is Visible    ${menu_item}    5
-    Click Element                    ${menu_item}
-
-    Sleep    5
-    
-    Close Application
+    Close session
